@@ -1,5 +1,3 @@
-/*HACE QUE AL AGREGARLE PADDING O UN BORDER A UN ELEMENTO, ESTE NO CREZCA MAS DEL TAMANO QUE LE HEMOS ASIGNADO
-/*APLICA BOX-SIZING: BORDER-BOX A TODOS LOS ELEMENTOS*/
 html {
     box-sizing: border-box;
     font-size: 62.5%; /*1 REM IGUAL A 10PX*/
@@ -57,13 +55,10 @@ a{
     max-width: 120rem;
     margin: 0 auto ;
 }
-/*CREA IMAGENES RESPONSIVE*/
 img{
   max-width: 100%;
-  /* ELIMINA EL ESPACIO ENTRE LA IMAGEN Y EL SIGUIENTE ELEMENTO HACIA ABAJO */
   display: block;
 }
-
 .btn{
     background: #8CBC00;
     display: block;
@@ -129,11 +124,8 @@ img{
 
 .hero{
     background-image: url(../img/principal.jpg);
-    /*LAS IMAGENES DE FONDO SE REPITEN POR DEFECTO, PARA EVIAR ESO AGREGAMOS LA SIGUIENTE PROPIEDAD*/
     background-repeat: no-repeat;
-    /*LA SE ESTIRA Y TOMA TODO EL ESPACIO DISPONIBLE*/
     background-size: cover;
-                         /*HORIZONTAL, VERTICAL*/
     background-position: center center;
     height: 25rem;
 }
@@ -185,23 +177,17 @@ img{
 
 /*BLOQUE NOSOTROS*/
 .sobre-nosotros{
-    /*LINEAR GRADIENT SE ULTILIZA CON BACKGROUND-IMAGE*/
     background-image: linear-gradient(to bottom, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
-                        /*HORIZONTAL, VERTICAL*/
     background-position: center, top left;
     background-repeat: no-repeat;
-                     /*Aplica al gradiante, aplica a la imagen*/
     background-size: 100%, 70rem;
 }
 
 @media (min-width: 768px){
     .sobre-nosotros{
-        /*LINEAR GRADIENT SE ULTILIZA CON BACKGROUND-IMAGE*/
         background-image: linear-gradient(to right, transparent 50%, #037bc0 50%, #037bc0 100%), url(../img/nosotros.jpg);
-                            /*HORIZONTAL, VERTICAL*/
         background-position: left center;
         padding: 10rem 0;
-                         /*Aplica al gradiante, aplica a la imagen*/
         background-size: 100%, 160rem;
     }
 }
@@ -214,7 +200,6 @@ img{
 @media (min-width: 768px){
     .sobre-nosotros-grid{
         grid-template-columns: repeat(2, 1fr);
-        /*ELIMINANDO EL GRID TEMPLAT ROWS DEL TAMAÑO MOVIL*/
         grid-template-rows: unset;
         column-gap: 4rem;
     }
@@ -377,7 +362,6 @@ img{
 .contenido-nosotros{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /*CUANDO LA IMAGEN MIDA MENOS DE 250 PX, SE POSICIONARA ENCIMA DEL TEXTO*/
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 5rem;
 }
@@ -385,7 +369,6 @@ img{
 .informacion-nosotros{
     display: flex;
     flex-direction: column;
-    /*CENTRA LOS PARRAFOS DE FORMA VESTICAL RESPECTO A SU CONTENIDO */
     justify-content: center;
     padding: 5rem;
 }
@@ -436,8 +419,6 @@ img{
     }
 }
 
-
-
 .entrada-meta p{
     font-weight: 700;
 }
@@ -470,8 +451,6 @@ img{
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
-/*LE DAMOS LA MISMA PROPORCION A TODAS LAS IMAGENES*/
 .galeria img{
     height: 40rem;
     width: 40rem;
@@ -484,7 +463,6 @@ img{
     margin: 0 auto;
 }
 
-/*CAMBIANDO LOS ESTILOS POR DEFECTO DEL FIELDSET*/
 .formulario fieldset{
     border: 1px solid #000;
     margin-bottom: 2rem;
@@ -507,11 +485,9 @@ img{
 }
 
 .campo label{
-    /*QUEDAN DEL MISMO ANCHO TODOS LOS LABELS Y AUT ALINEA LOS INPUT*/
     flex-basis: 16rem;
 }
-/*SELECTOR DE ATRIBUTO*/
-/*SELECCIONA TODOS LOS INPUT, MENOS LOS DE TYPE RADIO*/
+
 .campo input:not([type="radio"]),
 .campo textarea,
 .campo select{
